@@ -1,0 +1,77 @@
+.theem-container{
+    position: fixed;
+    top: 30px;
+    right: 0;
+    width: 200px;
+    border: 2px solid black;
+    padding: 15px;
+    z-index: 10000;
+    background:var(--text-black-900);
+    border-radius: 5px;
+    transform: translateX(100%);
+    transition: 0.7s;
+}
+.theem-container.show{
+    transform: translateX(0%);
+}
+.theem-container .s-icon{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 16px;
+     background: var(--text-black-900);
+     color: var(--bg-black-900);
+     right: 100%;
+     margin-right: 25px;
+     cursor: pointer;
+     border-radius: 50%;
+     border: 1px solid var(--bg-black-900);
+}
+.theem-container .s-icon i{
+   line-height: 30px;
+}
+.theem-container .theem-color-toggler{
+    top: 0;
+}
+.theem-container .day-night{
+    margin-top: 50px;
+}
+.theem-container h4{
+    font-size: 20px;
+    color: var(--bg-black-900);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+
+}
+.theem-container .colors{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.theem-container .colors span{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.theem-container .color-1{
+    background-color:#ec900f;
+}
+.theem-container .color-2{
+    background-color:#c01618;
+}
+.theem-container .color-3{
+    background-color:#54a0ff;
+}
+.theem-container .color-4{
+    background-color:#ffb142;
+}
+.theem-container .color-5{
+    background-color:#3dc1d3;
+}

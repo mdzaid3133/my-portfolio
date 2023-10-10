@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Ubuntu&display=swap');
+:root{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    /* --primary-color:#edfefc;
+    --secondary-color:#212121; */
+}
+
+/* :root{
+    --skin-color:#487204;
+} */
+
+ body.first-theem{
+    --skin-color:#ec900f;
+ }
+body.second-theem{
+    --skin-color:#c01618;
+ }
+ body.third-theem{
+    --skin-color:#54a0ff;
+ }
+ body.fourth-theem{
+    --skin-color:#ffb142;
+ }
+ body.fifth-theem{
+    --skin-color:#3dc1d3;
+ }
+ /*---------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    scroll-behavior: smooth;
+   
+
+}
+.btn{
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius:  19px;
+    font-size: 15px;
+    background-color: var(--skin-color);
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    background-color: var(--skin-color);
+    transform: scale(1.05);
+}
+::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*--------------main css start------------*/
+.main-container{
+    padding-left: 20%;
+
+}
+.main-content.dark{
+    --text-black-900:#e8dfec;
+    --bg-black-900:#302e4d;
+    transition: all 1s ease;  
+}
+.hidden{
+    display: none !important;
+}
+.section{
+    /* position: fixed; */
+    /* left: 20%;
+    top: 0;
+    right: 0; */
+    min-height: 100vh;
+    display: block;
+    background-color: var(--bg-black-900);
+    opacity: 1;
+    /* z-index: 1; */
+    padding: 0 30px;
+    /* transition: all 1s ease; */
+}
+.section{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+.aside.darksidebar{
+    --text-black-900:#fdf9ff;
+    --bg-black-700:#504e70;
+}
+.aside.toggle{
+  display: block;
+}
+.aside{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    background-color: var(--bg-black-700);
+    height: 100%;
+    z-index: 200;
+    padding: 0rem 4rem;
+}
+
+.logo{
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+.logo a{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-black-900);
+    padding: 10px 15px;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+.logo span{
+    color: var(--skin-color);
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+}
+.aside .logo a::before{
+    content: "";
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-top: 4px solid var(--skin-color);
+    border-left: 4px solid var(--skin-color);
+}
+.logo a::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 30px;
+    height: 30px;
+    display: block;
+     border-right: 4px solid var(--skin-color);
+    border-bottom: 4px solid var(--skin-color); 
+}
+.nav-list{
+    /* text-align: center; */
+    margin-top: 150px;
+}
+.nav-list li{
+    display: block;
+    list-style: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--bg-black-900);
+}
+.nav-list .nav-link.active{
+  color: rgb(6, 30, 35);
+}
+.nav-list li a{
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px 15px;
+    color: var(--text-black-900);
+    filter: blur(0.6px);
+    filter:brightness(4)
+}
+.nav-list li a i{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+.menu-toggler{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    border: 2px solid var(--skin-color);
+    background-color: #060606;
+    padding: 5px 8px;
+    border-radius: 5px;
+     display: none;
+}
+.menu-toggler #togglerIcon{
+    color: var(--skin-color);
+    font-size: 25px;
+}
+.closeSideBar{
+ display: none;
+position: relative;
+    
+}
+.closeSideBar #cutIcon{
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+
+/*--------------------home css-----------------------*/
+.home{
+    display: flex;
+    min-height: 100vh;
+    color: var(--text-black-900);
+}
+.padd-15{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.home .container{
+     max-width: 95%;
+     width: 100%;
+     margin: auto;
+}
+.home .content-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.home .left-content{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.home .left-content h2{
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-black-900);
+}
+.home .left-content p{
+    font-size: 1.3rem;
+    margin-bottom: 100px;
+    color: var(--text-black-900);
+   
+}
+.home .left-content span{
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    font-family: 'Kalam', cursive;
+}
+
+.home .right-content{
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+.home .right-content>img{
+     height: 400px;
+    
+}
+.home .right-content::before{
+   content: "";
+   position: absolute;
+   width: 80px;
+   height: 80px;
+   top: -40px;
+   left:10px;
+   display: block;
+   border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+}
+
+.home  .right-content::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom:-40px;
+    right: 10px;
+    display: block;
+    border-right: 10px solid var(--skin-color);
+    border-bottom: 10px solid var(--skin-color); 
+ }
+ /*------------------------about css------------------------------*/
+ .about .about-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+ }
+ .about .about-title h2{
+    font-size: 35px;
+    color: var(--text-black-900);
+    position: relative;
+ }
+ .about .about-title h2::before{
+    content: "";
+    width: 70px;
+    height: 4px;
+    background-color: var(--skin-color);
+    top: 100%;
+    left: 0;
+    position: absolute;
+ }
+ .about .about-title h2::after{
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: var(--skin-color);
+    top: 100%;
+    left: 0;
+    position: absolute;
+    margin-top: 8px;
+ }
+ .about .about-content .about-text{
+    flex: 0 0 100%;
+    width: 100%;
+    margin-top: 60px;
+ }
+ .about .about-content .about-text h3{
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: var(--text-black-900);
+ }
+ .about .about-content .about-text p{
+    font-size: 16px;
+    color: var(--text-black-900);
+    margin-bottom: 15px;
+   }
+ .about .about-content .about-text span{
+    color: var(--skin-color);
+ }
+.sikll-Details-container{
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: 50px;
+}
+
+.my-info{
+    flex-basis: 50%;
+}
+.my-info table{
+    width: 100%;
+}
+.my-info table tr td p{
+    color: var(--text-black-900);
+    font-weight: bold;
+}
+.my-info table tr td span{
+    color: var(--text-black-900);
+    font-weight: normal;
+}
+.my-info table tr td{
+     padding-bottom: 15px;
+     
+}
+.my-info .button-box{
+    margin-top: 40px;
+}
+.my-info .button-box a{
+    margin-right: 10px;
+}
+.my-skills{
+    flex-basis: 50%;
+}
+ .my-skills .skill{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--text-black-900);
+ }
+ .my-skills .progress-bar{
+    margin-bottom: 25px;
+    background-color:var(--text-black-700);
+    height: 6px;
+    border-radius: 8px;
+ }
+ .my-skills .progress-bar div{
+    background-color: var(--skin-color);
+    height: 100%;
+    border-radius: 8px;
+ }
+ .my-skills .first-skill .progress-bar div{
+    width: 90%;
+ }
+ .my-skills .second-skill .progress-bar div{
+    width: 70%;
+ }
+ .my-skills .third-skill .progress-bar div{
+    width: 50%;
+ }
+ .my-skills .fourth-skill .progress-bar div{
+    width: 70%;
+ }
+ .my-skills .Other-skill .progress-bar div{
+    width: 75%;
+ }
+
+ /*---------------------service css------------------------------*/
+ .service .service-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+ }
+ .service .service-title h2{
+    font-size: 35px;
+    color:var(--text-black-900);
+    position: relative;
+ }
+ .service .service-title h2::before{
+    content: "";
+    width: 70px;
+    height: 4px;
+    background-color: var(--skin-color);
+    top: 100%;
+    left: 0;
+    position: absolute;
+ }
+.service-title h2::after{
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: var(--skin-color);
+    top: 100%;
+    left: 0;
+    position: absolute;
+    margin-top: 8px;
+ }
+ .service  .card-container{
+    margin-top: 60px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(290px,1fr));
+   grid-gap: 20px;
+
+ }
+ .service  .card-container .card{
+    text-align: center;
+    height: 250px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    box-shadow:  0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.1s;
+ }
+ .service  .card-container .card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+ }
+ .service  .card-container .card .card-icon{
+    margin-top: 10px;
+ }
+ .service  .card-container .card .card-icon i{
+    background-color: var(--skin-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+ }
+ .service  .card-container .card  .card-title{
+    color: var(--text-black-900);
+    margin-top: 25px;
+    margin-bottom: 20px;
+ }
+ .service  .card-container .card  .card-text{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-black-900);
+ }
+
+ /*-------------Portfolio css-----------------*/
+
+ .portfolio .portfolio-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+ }
+ .portfolio .portfolio-title h2{
+    font-size: 35px;
+    color:var(--text-black-900);
+    position: relative;
+ }
+ .portfolio .portfolio-title h2::before{
+    content: "";
+    width: 70px;
+    height: 4px;
+    background-color: var(--skin-color);
+    top: 100%;
+    left: 0;
+    position: absolute;
+ }
+.portfolio-title h2::after{
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: var(--skin-color);
+    top: 100%;
+    left: 0;
+    position: absolute;
+    margin-top: 8px;
+ }
+.portfolio-subtitle{
+    margin-top: 30px;
+    color: var(--text-black-900);
+} 
+.portfolio .card-container{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px,1fr));
+    grid-gap: 20px;
+}
+.portfolio .card-container .card{
+    text-align: center;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow:  0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.1s;
+ }
+
+ .portfolio .card-container .card div{
+    transition:background-position 4s eas 0s;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+    transition: all ease-in-out 5s;
+ }
+ .portfolio .card-container .card div:hover{
+    background-position: bottom center;
+ }
+ /*---------------contact css---------*/
+ .contact .contact-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+ }
+ .contact .contact-title h2{
+    font-size: 35px;
+    color:var(--text-black-900);
+    position: relative;
+ }
+ .contact .contact-title h2::before{
+    content: "";
+    width: 70px;
+    height: 4px;
+    background-color: var(--skin-color);
+    top: 100%;
+    left: 0;
+    position: absolute;
+ }
+.contact-title h2::after{
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: var(--skin-color);
+    top: 100%;
+    left: 0;
+    position: absolute;
+    margin-top: 8px;
+ }
+ .contact-subtitle{
+    margin-top: 60px;
+    text-align: center;
+} 
+.contact-subtitle h3{
+    margin-bottom: 10px;
+    color: var(--skin-color)
+}
+.contact-subtitle p{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--text-black-900);
+}
+.contact .connectionBox-container{
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(270px,1fr));
+ margin-top: 60px;
+
+}
+.contact .connectionBox-container .connection-box{
+    text-align: center;
+    padding: 15px 10px;
+    overflow: hidden;
+}
+.contact .connectionBox-container .connection-box i{
+    color: var(--skin-color);
+}
+.contact .connectionBox-container .connection-box h4{
+    color: var(--text-black-900);
+    margin-bottom: 10px;
+    margin-top: 15px;
+    
+}
+.contact .connectionBox-container .connection-box p{
+    color: var(--text-black-900);
+}
+.contact .form-container{
+    margin-top: 50px;
+}
+.contact .form-container .mail-title{
+    text-align: center;
+}
+.contact .form-container .mail-title h3{
+    color: var(--skin-color);
+    margin-bottom: 15px;
+}
+.contact .form-container .mail-title p{
+    font-size: 14px;
+    color: var(--text-black-900);
+}
+.contact .form-container form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+     
+}
+.contact .form-container form input{
+    border-radius: 25px;
+    padding: 15px 15px;
+    border: none;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.contact .form-container form textarea{
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: none;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.contact .form-container form :nth-child(3){
+    grid-column: 1/3;
+}
+.contact .form-container form :nth-child(4){
+    grid-column: 1/3;
+}
+.contact .form-container form :nth-child(5){
+    width: 200px;
+    display: block;
+}
